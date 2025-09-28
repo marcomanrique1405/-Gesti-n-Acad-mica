@@ -1,7 +1,7 @@
 package com.gestionacademica.manrique.domain.model.builder;
 
 import com.gestionacademica.manrique.domain.model.Alumno;
-import com.gestionacademica.manrique.domain.model.enums.EstatusAlumno;
+import com.gestionacademica.manrique.domain.model.enums.EstatusGeneral;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
@@ -50,7 +50,7 @@ public class AlumnoBuilder {
         return this;
     }
 
-    public AlumnoBuilder conEstatus(EstatusAlumno estatus) {
+    public AlumnoBuilder conEstatus(EstatusGeneral estatus) {
         alumno.setEstatus(estatus);
         return this;
     }
@@ -60,7 +60,7 @@ public class AlumnoBuilder {
            alumno.setId(UUID.randomUUID());
         }
         if (alumno.getEstatus() == null) {
-            alumno.setEstatus(EstatusAlumno.ACTIVO);
+            alumno.setEstatus(EstatusGeneral.ACTIVO);
         }
         if (alumno.getFechaIngreso() == null) {
             alumno.setFechaIngreso(LocalDate.now());

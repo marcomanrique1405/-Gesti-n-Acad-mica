@@ -1,6 +1,6 @@
 package com.gestionacademica.manrique.domain.model;
 
-import com.gestionacademica.manrique.domain.model.enums.EstatusAlumno;
+import com.gestionacademica.manrique.domain.model.enums.EstatusGeneral;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -12,7 +12,7 @@ public class Alumno {
     private String email;
     private String telefono;
     private LocalDate fechaIngreso;
-    private EstatusAlumno estatus;
+    private EstatusGeneral estatus;
 
     public UUID getId() { return id; }
 
@@ -38,7 +38,7 @@ public class Alumno {
 
     public void setFechaIngreso(LocalDate fechaIngreso) { this.fechaIngreso = fechaIngreso; }
 
-    public EstatusAlumno getEstatus() { return estatus; }
+    public EstatusGeneral getEstatus() { return estatus; }
 
-    public void setEstatus(EstatusAlumno estatus) { this.estatus = estatus; }
+    public void setEstatus(EstatusGeneral estatus) { this.estatus = estatus; }
 }
